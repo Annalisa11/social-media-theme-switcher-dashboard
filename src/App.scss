@@ -2,6 +2,21 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 20fr 1fr;
+  grid-template-columns: [left-border] 1fr [left] 20fr [right] 1fr [right-border];
+  grid-template-areas:
+    ". header ."
+    "left main right"
+    ". footer .";
   background-color: var(--bg-color);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr [card-col]);
+  grid-gap: 2rem;
+  grid-area: main;
+}
+
+header {
+  grid-area: header;
 }

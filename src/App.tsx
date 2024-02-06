@@ -16,10 +16,14 @@ function App() {
 
   return (
     <div className="grid">
-      <h1>Social Media Dashboard</h1>
-      <p>Total Followers: 23,004</p>
-      <h2 onClick={toggleTheme}>Overview - Today</h2>
-      <button onClick={toggleTheme}>button</button>
+      <header>
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </header>
+      <div className="cards-grid">
+        <h2>Overview - Today</h2>
+        <button onClick={toggleTheme}>button</button>
+      </div>
     </div>
   );
 }
