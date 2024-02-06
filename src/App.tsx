@@ -18,16 +18,21 @@ function App() {
   return (
     <div className="grid">
       <header>
-        <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
+        <div>
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div className="theme-switch">
+          <p>Dark Mode</p>
+          <button onClick={toggleTheme}>button</button>
+        </div>
       </header>
       <main>
         <h2>Overview - Today</h2>
-        <button onClick={toggleTheme}>button</button>
         <div className="cards-grid">
           <SocialMediaCard
             followers={"1987"}
-            username={"koala"}
+            username={"nathanf"}
             followerStats={12}
             positive={true}
             theme={"Facebook"}
