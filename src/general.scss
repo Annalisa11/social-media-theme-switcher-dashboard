@@ -1,0 +1,37 @@
+:root {
+  --success-color: hsl(163, 72%, 41%);
+  --error-color: hsl(356, 69%, 56%);
+
+  --facebook-color: hsl(208, 92%, 53%);
+  --twitter-color: hsl(203, 89%, 53%);
+  --instagram-gradient-start: hsl(37, 97%, 70%);
+  --instagram-gradient-end: hsl(329, 70%, 58%);
+  --youtube-color: hsl(348, 97%, 39%);
+}
+
+html[data-theme="dark"] {
+  /* Dark Theme */
+  --toggle-dark-start: hsl(210, 78%, 56%);
+  --toggle-dark-end: hsl(146, 68%, 55%);
+
+  /* Neutral - Dark Theme */
+  --bg-color: hsl(230, 17%, 14%);
+  --very-dark-blue-top-bg-pattern: hsl(232, 19%, 15%);
+  --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
+  --desaturated-blue-text: hsl(228, 34%, 66%);
+  --white-text: hsl(0, 0%, 100%);
+}
+
+html[data-theme="light"] {
+  /* Light Theme */
+  --toggle-light: hsl(230, 22%, 74%);
+
+  /* Neutral - Light Theme */
+  --bg-color: hsl(0, 0%, 100%);
+  --very-pale-blue-top-bg-pattern: hsl(225, 100%, 98%);
+  --light-grayish-blue-card-bg: hsl(227, 47%, 96%);
+  --dark-grayish-blue-text: hsl(228, 12%, 44%);
+  --very-dark-blue-text: hsl(230, 17%, 14%);
+}
+
+// TODO: extract colors and add them as variables for different shades and saturation.

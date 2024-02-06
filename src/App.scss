@@ -1,4 +1,7 @@
+@use "general" as *;
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 20fr 1fr;
+  background-color: var(--bg-color);
 }
