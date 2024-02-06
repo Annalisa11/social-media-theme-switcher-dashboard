@@ -1,0 +1,80 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg-color);
+  justify-content: center;
+  border-radius: 4px;
+  overflow: clip;
+}
+
+.card {
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-line {
+  min-height: 4px;
+
+  &.instagram {
+    background: var(--instagram-gradient);
+  }
+
+  &.twitter {
+    background-color: var(--twitter-color);
+  }
+
+  &.facebook {
+    background-color: var(--facebook-color);
+  }
+
+  &.youtube {
+    background-color: var(--youtube-color);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary-color);
+
+  span {
+    font-size: smaller;
+    font-weight: bold;
+  }
+}
+
+.followers {
+  strong {
+    font-size: 4rem;
+    color: var(--text-primary-color);
+  }
+
+  color: var(--text-secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+
+  > div {
+    font-variant: all-petite-caps;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 4px;
+
+  &.positive {
+    color: var(--success-color);
+  }
+
+  &.negative {
+    color: var(--error-color);
+  }
+}

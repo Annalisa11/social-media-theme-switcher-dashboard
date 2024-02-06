@@ -3,11 +3,13 @@
 .grid {
   display: grid;
   grid-template-columns: [left-border] 1fr [left] 20fr [right] 1fr [right-border];
+  grid-template-rows: auto 1fr 100px;
   grid-template-areas:
     ". header ."
     "left main right"
     ". footer .";
   background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
 .cards-grid {
@@ -19,4 +21,8 @@
 
 header {
   grid-area: header;
+}
+
+main {
+  grid-area: main;
 }

@@ -11,7 +11,7 @@
   --instagram-gradient-start: hsl(37, 97%, 70%);
   --instagram-gradient-end: hsl(329, 70%, 58%);
   --instagram-gradient: linear-gradient(
-    0deg,
+    90deg,
     var(--instagram-gradient-start) 0%,
     var(--instagram-gradient-end) 100%
   );
@@ -26,6 +26,12 @@
   --body-copy: 14px;
 }
 
+body {
+  font-family: var(--primary-font);
+  font-size: var(--body-copy);
+  font-weight: 400;
+}
+
 html[data-theme="dark"] {
   /* Dark Theme */
   --toggle-dark-start: hsl(210, 78%, 56%);
@@ -33,8 +39,8 @@ html[data-theme="dark"] {
 
   /* Neutral - Dark Theme */
   --bg-color: hsl(230, 17%, 14%);
-  --card-bg-color: hsl(232, 19%, 15%);
-  --card-bg-color-hover: hsl(228, 28%, 20%);
+  --card-bg-color-top: hsl(232, 19%, 15%);
+  --card-bg-color: hsl(228, 28%, 20%);
   --text-secondary-color: hsl(228, 34%, 66%);
   --text-primary-color: hsl(0, 0%, 100%);
 }
@@ -45,8 +51,8 @@ html[data-theme="light"] {
 
   /* Neutral - Light Theme */
   --bg-color: hsl(0, 0%, 100%);
-  --card-bg-color: hsl(225, 100%, 98%);
-  --card-bg-color-hover: hsl(227, 47%, 96%);
+  --card-bg-color-top: hsl(225, 100%, 98%);
+  --card-bg-color: hsl(227, 47%, 96%);
   --text-secondary-color: hsl(228, 12%, 44%);
   --text-primary-color: hsl(230, 17%, 14%);
 }
