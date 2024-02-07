@@ -1,0 +1,25 @@
+.social-media-overview {
+  display: flex;
+  width: 100%;
+  background-color: var(--card-bg-color);
+  flex-direction: column;
+  padding: 1rem;
+  gap: 30px;
+  border-radius: 4px;
+
+  .first-row, .second-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .data {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--text-primary-color);
+  }
+
+  .data-type{
+    font-weight: bold;
+  }
+}
+

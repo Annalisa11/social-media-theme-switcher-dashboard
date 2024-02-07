@@ -4,6 +4,8 @@ import "./App.scss";
 import { ThemeContext } from "./ThemeProvider";
 import "./general.scss";
 import SocialMediaCard from "./components/SocialMediaCard";
+import Switch from "./components/Switch";
+import SocialMediaOverview from "./components/SocialMediaOverview";
 
 function App() {
   const { darkTheme, toggleTheme } = useContext(ThemeContext);
@@ -24,11 +26,10 @@ function App() {
         </div>
         <div className="theme-switch">
           <p>Dark Mode</p>
-          <button onClick={toggleTheme}>button</button>
+          <Switch onSwitch={toggleTheme} sliderOnRightside={true} />
         </div>
       </header>
       <main>
-        <h2>Overview - Today</h2>
         <div className="cards-grid">
           <SocialMediaCard
             followers={"1987"}
@@ -57,6 +58,64 @@ function App() {
             followerStats={144}
             positive={false}
             theme={"YouTube"}
+          />
+          <h2>Overview - Today</h2>
+          <SocialMediaOverview
+            dataNumber={"87"}
+            theme={"Facebook"}
+            dataType={"Page Views"}
+            positive={true}
+            stats={3}
+          />
+          <SocialMediaOverview
+            dataNumber={"52"}
+            theme={"Facebook"}
+            dataType={"Likes"}
+            positive={false}
+            stats={2}
+          />
+          <SocialMediaOverview
+            dataNumber={"5462"}
+            theme={"Instagram"}
+            dataType={"Likes"}
+            positive={true}
+            stats={2257}
+          />
+          <SocialMediaOverview
+            dataNumber={"52k"}
+            theme={"Instagram"}
+            dataType={"Profile Views"}
+            positive={true}
+            stats={1375}
+          />
+          <SocialMediaOverview
+            dataNumber={"117"}
+            theme={"Twitter"}
+            dataType={"Retweets"}
+            positive={true}
+            stats={303}
+          />
+
+          <SocialMediaOverview
+            dataNumber={"507"}
+            theme={"Twitter"}
+            dataType={"Likes"}
+            positive={true}
+            stats={553}
+          />
+          <SocialMediaOverview
+            dataNumber={"107"}
+            theme={"YouTube"}
+            dataType={"Likes"}
+            positive={false}
+            stats={19}
+          />
+          <SocialMediaOverview
+            dataNumber={"1407"}
+            theme={"YouTube"}
+            dataType={"Total Views"}
+            positive={false}
+            stats={12}
           />
         </div>
       </main>

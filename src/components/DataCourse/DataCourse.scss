@@ -1,0 +1,15 @@
+
+.stats {
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  gap: 4px;
+
+  &.positive {
+    color: var(--success-color);
+  }
+
+  &.negative {
+    color: var(--error-color);
+  }
+}
