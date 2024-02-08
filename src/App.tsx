@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import logo from "./logo.svg";
+import React, { useContext, useEffect } from "react";
 import "./App.scss";
 import { ThemeContext } from "./ThemeProvider";
 import "./general.scss";
