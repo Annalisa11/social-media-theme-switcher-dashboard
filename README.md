@@ -24,10 +24,14 @@ Users should be able to:
 - Toggle color theme to their preference
 
 ### Screenshots
-
-<img src="./screenshots/mobile-light-theme.png" style="float: right; width: 13%;">
+<p align="right">
+  <img src="./screenshots/mobile-light-theme.png" align="right" style=" width: 12%;">
+</p>
+<p align="left">
 <img src="./screenshots/desktop-dark-theme.png" style=" width: 85%;">
-<img src="./screenshots/desktop-light-theme.png" style="width: 85%;">
+<img src="./screenshots/desktop-light-theme.png"  style="width: 85%;">
+</p>
+
 
 
 ## My process
