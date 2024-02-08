@@ -4,9 +4,10 @@
   .grid {
     display: grid;
     grid-template-columns: [left-border] 1fr [left] 20fr [right] 1fr [right-border];
-    grid-template-rows: auto 1fr 100px;
+    grid-template-rows: [header] auto [header] 100px [main] 1fr [footer] 100px [footer];
     grid-template-areas:
-      ". header ."
+      "header-left header header-right"
+      "header-left header-bottom header-right"
       "left main right"
       ". footer .";
     background-color: var(--bg-color);
@@ -17,7 +18,7 @@
     display: grid;
     grid-template-columns: 1fr [left] repeat(2, 1fr [middle]) 1fr [right];
     grid-gap: 1rem 2rem;
-    grid-area: main;
+    grid-area: header-bottom-start / left-end / main-end / right-start;
     justify-content: space-between;
     grid-auto-flow: row;
 
@@ -29,7 +30,6 @@
   @media only screen and (max-width: $desktop-bp) {
     .cards-grid {
       grid-template-columns: [left] 1fr [middle] 1fr [middle] 1fr [right];
-      //background-color: aqua;
     }
 
     header {
@@ -37,13 +37,14 @@
 
       .theme-switch {
         justify-content: space-between;
+        margin-bottom: 1rem;
       }
     }
   }
+
   @media (max-width: $mobile-bp) {
     .cards-grid {
       grid-template-columns: [left] 1fr [right];
-      //background-color: aqua;
     }
 
     header {
@@ -51,6 +52,7 @@
 
       .theme-switch {
         justify-content: space-between;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -59,6 +61,12 @@
     grid-area: header;
     display: flex;
     justify-content: space-between;
+  }
+
+  .header-bg {
+    grid-area: header-start / header-left-start / header-bottom-end /
+      header-right-end;
+    background-color: var(--bg-color-top);
   }
 
   main {

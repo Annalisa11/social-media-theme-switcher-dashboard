@@ -53,7 +53,7 @@ html[data-theme="dark"] {
 
   /* Neutral - Dark Theme */
   --bg-color: hsl(230, 17%, 14%);
-  --card-bg-color-top: hsl(232, 19%, 15%);
+  --bg-color-top: hsl(232, 19%, 15%);
   --card-bg-color: hsl(228, 28%, 20%);
   --text-secondary-color: hsl(228, 34%, 66%);
   --text-primary-color: hsl(0, 0%, 100%);
@@ -65,7 +65,7 @@ html[data-theme="light"] {
 
   /* Neutral - Light Theme */
   --bg-color: hsl(0, 0%, 100%);
-  --card-bg-color-top: hsl(225, 100%, 98%);
+  --bg-color-top: hsl(225, 100%, 98%);
   --card-bg-color: hsl(227, 47%, 96%);
   --text-secondary-color: hsl(228, 12%, 44%);
   --text-primary-color: hsl(230, 17%, 14%);
