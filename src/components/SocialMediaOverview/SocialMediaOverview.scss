@@ -23,5 +23,10 @@
   .data-type{
     font-weight: bold;
   }
+
+  &:hover{
+    background-color: var(--card-bg-color-hover);
+    cursor: pointer;
+  }
 }
 

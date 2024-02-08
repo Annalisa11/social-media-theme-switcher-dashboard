@@ -55,6 +55,7 @@ html[data-theme="dark"] {
   --bg-color: hsl(230, 17%, 14%);
   --bg-color-top: hsl(232, 19%, 15%);
   --card-bg-color: hsl(228, 28%, 20%);
+  --card-bg-color-hover: hsl(228, 28%, 30%);
   --text-secondary-color: hsl(228, 34%, 66%);
   --text-primary-color: hsl(0, 0%, 100%);
 }
@@ -67,6 +68,7 @@ html[data-theme="light"] {
   --bg-color: hsl(0, 0%, 100%);
   --bg-color-top: hsl(225, 100%, 98%);
   --card-bg-color: hsl(227, 47%, 96%);
+  --card-bg-color-hover: hsl(227, 47%, 90%);
   --text-secondary-color: hsl(228, 12%, 44%);
   --text-primary-color: hsl(230, 17%, 14%);
 }
