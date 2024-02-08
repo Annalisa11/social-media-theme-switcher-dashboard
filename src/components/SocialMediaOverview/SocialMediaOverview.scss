@@ -6,6 +6,8 @@
   padding: 1rem;
   gap: 30px;
   border-radius: 4px;
+  max-height: 8rem;
+  justify-content: space-between;
 
   .first-row, .second-row {
     display: flex;
