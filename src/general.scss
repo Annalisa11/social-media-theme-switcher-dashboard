@@ -24,10 +24,6 @@
     var(--toggle-dark-end) 100%
   );
 
-  // breakpoints
-  --mobile: 375px;
-  --desktop: 1440px;
-
   // fonts
 
   --primary-font: "Inter", sans-serif;
@@ -36,10 +32,10 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {
+  margin: 0;
   font-family: var(--primary-font);
   font-size: var(--body-copy);
   font-weight: 400;
@@ -74,5 +70,9 @@ html[data-theme="light"] {
   --text-secondary-color: hsl(228, 12%, 44%);
   --text-primary-color: hsl(230, 17%, 14%);
 }
+
+// breakpoints
+$mobile-bp: 375px;
+$desktop-bp: 1440px;
 
 // TODO: extract colors and add them as variables for different shades and saturation.

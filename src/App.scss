@@ -1,42 +1,75 @@
-@use "general" as *;
+@import "./general.scss";
 
-.grid {
-  display: grid;
-  grid-template-columns: [left-border] 1fr [left] 20fr [right] 1fr [right-border];
-  grid-template-rows: auto 1fr 100px;
-  grid-template-areas:
-    ". header ."
-    "left main right"
-    ". footer .";
-  background-color: var(--bg-color);
-  min-height: 100vh;
-
-  h2 {
-    grid-column: 1 / span 4;
+.app {
+  .grid {
+    display: grid;
+    grid-template-columns: [left-border] 1fr [left] 20fr [right] 1fr [right-border];
+    grid-template-rows: auto 1fr 100px;
+    grid-template-areas:
+      ". header ."
+      "left main right"
+      ". footer .";
+    background-color: var(--bg-color);
+    min-height: 100vh;
   }
-}
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr [card-col]);
-  grid-gap: 1rem 2rem;
-  grid-area: main;
-}
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr [left] repeat(2, 1fr [middle]) 1fr [right];
+    grid-gap: 1rem 2rem;
+    grid-area: main;
+    justify-content: space-between;
+    grid-auto-flow: row;
 
-header {
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-}
+    h2 {
+      grid-column: 1 / span right;
+    }
+  }
 
-main {
-  grid-area: main;
-}
+  @media only screen and (max-width: $desktop-bp) {
+    .cards-grid {
+      grid-template-columns: [left] 1fr [middle] 1fr [middle] 1fr [right];
+      //background-color: aqua;
+    }
 
-.theme-switch {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  color: var(--toggle-text-color);
-  font-weight: bold;
+    header {
+      flex-direction: column;
+
+      .theme-switch {
+        justify-content: space-between;
+      }
+    }
+  }
+  @media (max-width: $mobile-bp) {
+    .cards-grid {
+      grid-template-columns: [left] 1fr [right];
+      //background-color: aqua;
+    }
+
+    header {
+      flex-direction: column;
+
+      .theme-switch {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .theme-switch {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--toggle-text-color);
+    font-weight: bold;
+  }
 }
